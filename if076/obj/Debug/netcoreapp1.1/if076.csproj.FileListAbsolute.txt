@@ -1,0 +1,9 @@
+c:\users\sawyer\documents\visual studio 2017\Projects\if076\if076\bin\Debug\netcoreapp1.1\if076.deps.json
+c:\users\sawyer\documents\visual studio 2017\Projects\if076\if076\bin\Debug\netcoreapp1.1\if076.runtimeconfig.json
+c:\users\sawyer\documents\visual studio 2017\Projects\if076\if076\bin\Debug\netcoreapp1.1\if076.runtimeconfig.dev.json
+c:\users\sawyer\documents\visual studio 2017\Projects\if076\if076\bin\Debug\netcoreapp1.1\if076.dll
+c:\users\sawyer\documents\visual studio 2017\Projects\if076\if076\obj\Debug\netcoreapp1.1\if076.csprojResolveAssemblyReference.cache
+c:\users\sawyer\documents\visual studio 2017\Projects\if076\if076\obj\Debug\netcoreapp1.1\if076.AssemblyInfo.cs
+c:\users\sawyer\documents\visual studio 2017\Projects\if076\if076\bin\Debug\netcoreapp1.1\if076.pdb
+c:\users\sawyer\documents\visual studio 2017\Projects\if076\if076\obj\Debug\netcoreapp1.1\if076.dll
+c:\users\sawyer\documents\visual studio 2017\Projects\if076\if076\obj\Debug\netcoreapp1.1\if076.pdb

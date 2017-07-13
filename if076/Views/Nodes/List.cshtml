@@ -1,0 +1,14 @@
+@using if076.Entities
+
+@model IEnumerable<Node>
+
+@foreach (Node node in Model)
+{
+    <tr>
+        <td>@node.Name</td>
+        <td>
+            <button type="button" class="btn btn-success" onclick="formNode(@node.Id)">Edit</button>
+            <button type="button" class="btn btn-danger" onclick="dropNode(@node.Id)">Delete</button>
+        </td>
+    </tr>
+}
