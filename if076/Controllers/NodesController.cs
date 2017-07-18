@@ -19,29 +19,23 @@ namespace if076.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetNode()
+        public async Task<IEnumerable<Node>> GetNode()
         {
-            return PartialView("List", await _db.GetList());
+            return await _db.GetList();
         }
 
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetNodeForm([FromRoute]int id)
         {
-            if (id == 0)
+            Node node = await _db.GetById(id);
+
+            if (node != null)
             {
-                return PartialView("Form");
+                return Ok(node);
             }
             else
             {
-                Node node = await _db.GetById(id);
-                if (node != null)
-                {
-                    return PartialView("Form", node);
-                }
-                else
-                {
-                    return NotFound();
-                }
+                return NotFound();
             }
         }
 
@@ -50,7 +44,7 @@ namespace if076.Controllers
         {
             if (await _db.Create(node) != null)
             {
-                return Ok();
+                return Ok(node);
             }
             else
             {
@@ -58,18 +52,12 @@ namespace if076.Controllers
             }
         }
 
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateNode([FromRoute] int id, [FromBody]Node node)
+        [HttpPut]
+        public async Task<IActionResult> UpdateNode([FromBody]Node node)
         {
-            if(node.Id != id)
-            {
-                return BadRequest();
-            }
-
-
             if (await _db.Update(node))
             {
-                return NoContent();
+                return Ok(node);
             }
             else
             {
@@ -82,7 +70,7 @@ namespace if076.Controllers
         {
             if (await _db.Delete(id))
             {
-                return Ok();
+                return Ok(id);
             }
             else
             {
